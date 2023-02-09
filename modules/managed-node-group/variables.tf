@@ -8,12 +8,17 @@ variable "tags" {
     description = "Tags to be add to AWS Resources"
 }
 
-variable "public_subnet_1a"{
+variable "cluster_name" {
     type = string
-    description = "Subnet to create EKS cluster"
+    description = "EKS cluster name to create MNG"
 }
 
-variable "public_subnet_1b"{
+variable "subnet_private_1a" {
     type = string
-    description = "Subnet to create EKS cluster"
+    description = "Subnet ID from AZ 1a"
+}
+
+variable "subnet_private_1b" {
+    type = string
+    description = "Subnet ID from AZ 1b"
 }
