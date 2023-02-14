@@ -30,7 +30,7 @@ resource "aws_nat_gateway" "eks_ngw_1a" {
     )
 }
 
-resource "aws_nat_gateway" "eks_ngw_eip_1b" {
+resource "aws_nat_gateway" "eks_ngw_1b" {
     allocation_id = aws_eip.eks_ngw_eip_1b.id
     subnet_id = aws_subnet.eks_subnet_public_1b.id
 
