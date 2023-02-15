@@ -6,7 +6,7 @@ resource "helm_release" "eks_helm_controller" {
     namespace = "kube-system"
 
     set {
-        name = "cluster_name"
+        name = "clusterName"
         value = var.cluster_name
     }
 
