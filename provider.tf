@@ -25,7 +25,7 @@ provider "aws" {
 }
 
 provider "kubernetes" {
-  host = moduke.eks_cluster.endpoint
+  host = module.eks_cluster.endpoint
   cluster_ca_certificate = base64decode(module.eks_cluster.certificate_authority)
   exec {
     api_version = "client.authentication.k8s.io/v1beta1"
@@ -36,7 +36,7 @@ provider "kubernetes" {
 
 provider "helm" {
   kubernetes {
-    host = moduke.eks_cluster.endpoint
+    host = module.eks_cluster.endpoint
     cluster_ca_certificate = base64decode(module.eks_cluster.certificate_authority)
     exec {
       api_version = "client.authentication.k8s.io/v1beta1"
