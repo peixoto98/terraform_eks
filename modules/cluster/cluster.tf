@@ -4,11 +4,11 @@ resource "aws_eks_cluster" "eks_cluster" {
 
   vpc_config {
     subnet_ids = [
-        var.public_subnet_1a, 
-        var.public_subnet_1b
+      var.public_subnet_1a,
+      var.public_subnet_1b
     ]
-    endpoint_private_access = true 
-    endpoint_public_access = true
+    endpoint_private_access = true
+    endpoint_public_access  = true
   }
 
   depends_on = [
@@ -16,9 +16,9 @@ resource "aws_eks_cluster" "eks_cluster" {
   ]
 
   tags = merge(
-      var.tags,
-      {
-        Name = "${var.project_name}-cluster"
-      }
+    var.tags,
+    {
+      Name = "${var.project_name}-cluster"
+    }
   )
 }
