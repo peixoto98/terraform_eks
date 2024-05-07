@@ -1,11 +1,11 @@
 output "certificate_authority" {
-  value = aws_eks_cluster.eks_cluster.certificate_authority[0].data
+  value = module.eks_cluster.certificate_authority
 }
 
 output "endpoint" {
-  value = aws_eks_cluster.eks_cluster.endpoint
+  value = module.eks_cluster.endpoint
 }
 
 output "cluster_name" {
-  value = aws_eks_cluster.eks_cluster.id
+  value = module.eks_cluster.cluster_name
 }
