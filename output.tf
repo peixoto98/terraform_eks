@@ -9,3 +9,7 @@ output "endpoint" {
 output "cluster_name" {
   value = module.eks_cluster.cluster_name
 }
+
+output "cluster_sg" {
+  value = module.eks_cluster.cluster_sg
+}
